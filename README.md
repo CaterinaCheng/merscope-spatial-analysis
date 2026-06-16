@@ -30,19 +30,19 @@ vessel-niche zoom figure (`Tcell_compartments`, `compartment_by_celltype`,
 `distance_QC_and_niche`, `CD8_PVS_DEG`, `zoom_vessel_niche_hb1R3_30um`).
 
 ### `microglia phenotyping/`
-Microglial state definition anchored to literature references (Green 2024, Tuddenham 2024)
-and **microglia-specific scHPF**, with QC, clustering, compartment-resolved states and DEGs
-(`extract_green_mic_markers.R`, `tuddenham_*`, `microglia_schpf_green`,
-`clean_microglia_schpf_qc`, `within_cluster_qc`, `clean_spatial`,
-`rawscore_heatmap_DEGbars`, `pairwise_compartment_DEG`, `BAM_control_supp` …).
+Microglial state definition anchored to Green 2024 signatures and **microglia-specific
+scHPF**, with QC, clustering, compartment-resolved states and DEGs
+(`extract_green_mic_markers.R`, `clean_microglia_schpf_qc`, `within_cluster_qc`,
+`clean_spatial`, `rawscore_heatmap_DEGbars`, `pairwise_compartment_DEG`,
+`microglia_state_separability`, `BAM_control_supp`, `microglia_density_GM_WM`).
 
 ### `microglia-T cell interaction/`
 Microglia DEGs in the T-cell niche, **ligand–receptor (co)expression** (gene-level and
 spatial), microglial-state enrichment around each T subset, MHC-II machinery near T cells,
 and cell–cell **neighborhood enrichment** by compartment (`niche_DEG`,
-`microglia_DEG_by_Tsubset`, `Tmic_LR`, `LR_dotplot`, `spatial_LR_dotplot`,
-`spatial_LR_coexpression`, `MHCII_around_Tcells`, `states_around_Tsubsets`,
-`neighborhood_interactions` …).
+`microglia_DEG_by_Tsubset`, `TRM_effector_memory_and_Tdeg`, `microglia_T_LR_dotplot`,
+`spatial_LR_dotplot`, `spatial_LR_coexpression`, `MHCII_around_Tcells`,
+`states_around_Tsubsets`, `Tsubset_zheat_compartment`, `neighborhood_interactions`).
 
 ### `utils/`
 Shared helpers (`stats_hardening` — multiple-testing / effect-size utilities).
@@ -52,8 +52,7 @@ Shared helpers (`stats_hardening` — multiple-testing / effect-size utilities).
   (`layers/counts`, `layers/counts_decontam`), `obs.cell_type_v2`.
 - `Tcell_subset_final_labels.csv` — final T/NK subset labels.
 - `QC data/*/cell_metadata.csv` — per-cell centroid coordinates.
-- Reference: Green 2024 microglia signatures, Tuddenham 2024 supplementary tables,
-  pan-tissue T-cell atlas (for projection).
+- Reference: Green 2024 microglia signatures, pan-tissue T-cell atlas (for projection).
 
 ## Environment
 Python (conda env `merscope`): `scanpy`, `anndata`, `schpf` (0.5.0), `scipy`, `numpy`,
