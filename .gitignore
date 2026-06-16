@@ -1,0 +1,39 @@
+# ---- DATA / OUTPUTS: never commit (unpublished/confidential) ----
+*.h5ad
+*.loom
+*.csv
+*.tsv
+*.xlsx
+*.xls
+*.rds
+*.joblib
+*.pkl
+*.npy
+*.npz
+*.parquet
+*.feather
+
+# figures / outputs
+*.png
+*.pdf
+*.svg
+*.tif
+*.tiff
+*.jpg
+*.jpeg
+
+# reference papers / downloaded supplements
+reference/
+**/reference/
+*.tar.gz
+
+# scratch / thumbnails
+_*.png
+*_view.png
+
+# python / env
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.DS_Store
+Thumbs.db
