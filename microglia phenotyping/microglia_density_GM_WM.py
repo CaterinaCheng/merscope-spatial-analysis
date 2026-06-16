@@ -14,8 +14,8 @@ import numpy as np, pandas as pd
 import h5py
 import matplotlib.pyplot as plt
 plt.rcParams.update({"font.size":10})
-CMAP=Path(r"D:\Caterina\MERSCOPE\merged_analysis\cellmap"); SAVE=Path(r"D:\Caterina\MERSCOPE\merged_analysis\scHPF")
-H5=CMAP/"merged_qc_brain_remapped.h5ad"; QC=Path(r"D:\Caterina\MERSCOPE\QC data")
+CMAP=Path(r"<MERSCOPE_ROOT>\merged_analysis\cellmap"); SAVE=Path(r"<MERSCOPE_ROOT>\merged_analysis\scHPF")
+H5=CMAP/"merged_qc_brain_remapped.h5ad"; QC=Path(r"<MERSCOPE_ROOT>\QC data")
 BIN=100.0  # um  -> bin area = 0.01 mm2
 BINAREA=(BIN/1000.0)**2
 WM_THR=0.60; GM_THR=0.40  # oligolineage fraction thresholds (between = transition, excluded)

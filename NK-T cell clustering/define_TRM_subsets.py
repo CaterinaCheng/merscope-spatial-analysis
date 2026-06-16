@@ -14,8 +14,8 @@ from pathlib import Path
 import numpy as np, pandas as pd, h5py, scanpy as sc, anndata as ad, matplotlib.pyplot as plt
 from scipy.sparse import csr_matrix
 sc.settings.verbosity=0
-NEW=Path(r"D:\Caterina\MERSCOPE\merged_analysis\scHPF\new")
-H5=Path(r"D:\Caterina\MERSCOPE\merged_analysis\cellmap\merged_qc_brain_remapped.h5ad")
+NEW=Path(r"<MERSCOPE_ROOT>\merged_analysis\scHPF\new")
+H5=Path(r"<MERSCOPE_ROOT>\merged_analysis\cellmap\merged_qc_brain_remapped.h5ad")
 
 cd8=pd.read_csv(NEW/"Tcell_CD8_robust_label.csv",index_col=0)["robust"].replace({"CD8 TEMRA-like":"CD8 TEMRA"})
 cd4=pd.read_csv(NEW/"Tcell_CD4_robust_label.csv",index_col=0)["robust"]

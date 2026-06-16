@@ -12,8 +12,8 @@ import numpy as np, pandas as pd, h5py, scanpy as sc, anndata as ad, matplotlib.
 from scipy.sparse import csr_matrix
 from scipy.spatial import cKDTree
 sc.settings.verbosity=0; plt.rcParams.update({"font.size":9})
-NEW=Path(r"D:\Caterina\MERSCOPE\merged_analysis\scHPF\new")
-H5=Path(r"D:\Caterina\MERSCOPE\merged_analysis\cellmap\merged_qc_brain_remapped.h5ad"); QC=Path(r"D:\Caterina\MERSCOPE\QC data")
+NEW=Path(r"<MERSCOPE_ROOT>\merged_analysis\scHPF\new")
+H5=Path(r"<MERSCOPE_ROOT>\merged_analysis\cellmap\merged_qc_brain_remapped.h5ad"); QC=Path(r"<MERSCOPE_ROOT>\QC data")
 R=30.0; MIN_MIC=40
 SUBS=["CD8 TRM 1","CD8 TRM 2","CD8 TEMRA","CD4 Th","CD4 CTL","CD4 Tcm/mem","CD4 Treg","NK"]
 ALLT=SUBS

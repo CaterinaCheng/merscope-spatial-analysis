@@ -14,8 +14,8 @@ from matplotlib.colors import TwoSlopeNorm
 from scipy.sparse import csr_matrix
 from scipy.spatial import cKDTree
 sc.settings.verbosity=0; plt.rcParams.update({"font.size":9})
-NEW=Path(r"D:\Caterina\MERSCOPE\merged_analysis\scHPF\new")
-H5=Path(r"D:\Caterina\MERSCOPE\merged_analysis\cellmap\merged_qc_brain_remapped.h5ad"); QC=Path(r"D:\Caterina\MERSCOPE\QC data")
+NEW=Path(r"<MERSCOPE_ROOT>\merged_analysis\scHPF\new")
+H5=Path(r"<MERSCOPE_ROOT>\merged_analysis\cellmap\merged_qc_brain_remapped.h5ad"); QC=Path(r"<MERSCOPE_ROOT>\QC data")
 R=30.0
 MEM=["ITGAE","CXCR6","CD69","IL7R","TCF7","SELL","CD27","CD28"]          # residency/memory/quiescence
 EFF=["GZMK","GZMB","PRF1","GNLY","NKG7","IFNG","TBX21","KLRG1","FGFBP2","CCL5"]  # cytotoxic/effector

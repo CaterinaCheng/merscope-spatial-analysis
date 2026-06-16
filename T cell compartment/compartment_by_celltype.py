@@ -10,8 +10,8 @@ from pathlib import Path
 import numpy as np, pandas as pd, h5py, matplotlib.pyplot as plt
 from scipy.spatial import cKDTree
 plt.rcParams.update({"font.size":9})
-NEW=Path(r"D:\Caterina\MERSCOPE\merged_analysis\scHPF\new")
-H5=Path(r"D:\Caterina\MERSCOPE\merged_analysis\cellmap\merged_qc_brain_remapped.h5ad"); QC=Path(r"D:\Caterina\MERSCOPE\QC data")
+NEW=Path(r"<MERSCOPE_ROOT>\merged_analysis\scHPF\new")
+H5=Path(r"<MERSCOPE_ROOT>\merged_analysis\cellmap\merged_qc_brain_remapped.h5ad"); QC=Path(r"<MERSCOPE_ROOT>\QC data")
 VESSEL=["End","Per","SMC"]
 lab=pd.read_csv(NEW/"Tcell_subset_final_labels.csv",index_col=0).iloc[:,0]
 with h5py.File(H5,"r") as f:

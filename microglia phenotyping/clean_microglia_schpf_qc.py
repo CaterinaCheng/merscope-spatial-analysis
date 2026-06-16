@@ -15,8 +15,8 @@ import matplotlib.patheffects as pe, matplotlib.lines as ml
 from scipy.sparse import csr_matrix, coo_matrix
 import warnings; warnings.filterwarnings("ignore"); sc.settings.verbosity=0
 plt.rcParams.update({"font.size":9,"font.family":"DejaVu Sans"})
-NEW=Path(r"D:\Caterina\MERSCOPE\merged_analysis\scHPF\new")
-DEC=Path(r"D:\Caterina\MERSCOPE\merged_analysis\cellmap\merged_qc_decontaminated.h5ad")
+NEW=Path(r"<MERSCOPE_ROOT>\merged_analysis\scHPF\new")
+DEC=Path(r"<MERSCOPE_ROOT>\merged_analysis\cellmap\merged_qc_decontaminated.h5ad")
 K=10; NTRIALS=3; MIN_CELLS=50; LEIDEN_RES=0.6; NGENE_MIN=40
 SIGS={"Microglia-core":["CX3CR1","CSF1R","C1QA","C1QB","C1QC","AIF1","TYROBP","P2RY12","P2RY13","TMEM119","CTSS","FCER1G"],
  "Astrocyte":["AQP4","GJA1","SLC1A3","SLC1A2","GLUL","GFAP","AQP9"],"Oligo":["MOG","MAL","PLP1","MOBP","CNP","MBP","UGT8"],

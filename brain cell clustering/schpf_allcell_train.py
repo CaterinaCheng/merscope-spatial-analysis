@@ -27,8 +27,8 @@ import h5py
 from scipy.sparse import csr_matrix
 from schpf import run_trials, save_model
 
-CMAP = Path(r"D:\Caterina\MERSCOPE\merged_analysis\cellmap")
-ROOT = Path(r"D:\Caterina\MERSCOPE\merged_analysis\scHPF")
+CMAP = Path(r"<MERSCOPE_ROOT>\merged_analysis\cellmap")
+ROOT = Path(r"<MERSCOPE_ROOT>\merged_analysis\scHPF")
 H5   = CMAP / "merged_qc_brain_remapped.h5ad"
 
 NFAC, NTRIALS, MAX_IT = 20, 3, 500

@@ -11,8 +11,8 @@ from pathlib import Path
 import numpy as np, pandas as pd, h5py, scanpy as sc, anndata as ad, matplotlib.pyplot as plt
 from scipy.sparse import csr_matrix
 sc.settings.verbosity=0
-NEW=Path(r"D:\Caterina\MERSCOPE\merged_analysis\scHPF\new")
-H5=Path(r"D:\Caterina\MERSCOPE\merged_analysis\cellmap\merged_qc_brain_remapped.h5ad")
+NEW=Path(r"<MERSCOPE_ROOT>\merged_analysis\scHPF\new")
+H5=Path(r"<MERSCOPE_ROOT>\merged_analysis\cellmap\merged_qc_brain_remapped.h5ad")
 lab=pd.read_csv(NEW/"Tcell_subset_final_labels.csv",index_col=0).iloc[:,0]
 with h5py.File(H5,"r") as f:
     idx=pd.Index([s.decode() if isinstance(s,bytes) else s for s in f["obs"][f["obs"].attrs.get("_index","_index")][:]])

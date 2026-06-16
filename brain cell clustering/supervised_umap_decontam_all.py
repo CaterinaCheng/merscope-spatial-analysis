@@ -28,8 +28,8 @@ import umap
 from scipy.spatial import cKDTree
 import matplotlib.pyplot as plt
 
-CMAP = Path(r"D:\Caterina\MERSCOPE\merged_analysis\cellmap")
-OUT  = Path(r"D:\Caterina\MERSCOPE\merged_analysis\Green2024")
+CMAP = Path(r"<MERSCOPE_ROOT>\merged_analysis\cellmap")
+OUT  = Path(r"<MERSCOPE_ROOT>\merged_analysis\Green2024")
 H5   = CMAP / "merged_qc_decontaminated_v2.h5ad"
 
 t0 = time.time()

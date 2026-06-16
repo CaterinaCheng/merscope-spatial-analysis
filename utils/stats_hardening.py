@@ -23,8 +23,8 @@ from scipy.spatial import cKDTree
 import statsmodels.formula.api as smf
 import matplotlib.pyplot as plt
 sc.settings.verbosity=0; plt.rcParams.update({"font.size":10}); rng=np.random.default_rng(0)
-CMAP=Path(r"D:\Caterina\MERSCOPE\merged_analysis\cellmap"); SAVE=Path(r"D:\Caterina\MERSCOPE\merged_analysis\scHPF\new"); LAB=Path(r"D:\Caterina\MERSCOPE\merged_analysis\scHPF")
-H5=CMAP/"merged_qc_brain_remapped.h5ad"; QC=Path(r"D:\Caterina\MERSCOPE\QC data")
+CMAP=Path(r"<MERSCOPE_ROOT>\merged_analysis\cellmap"); SAVE=Path(r"<MERSCOPE_ROOT>\merged_analysis\scHPF\new"); LAB=Path(r"<MERSCOPE_ROOT>\merged_analysis\scHPF")
+H5=CMAP/"merged_qc_brain_remapped.h5ad"; QC=Path(r"<MERSCOPE_ROOT>\QC data")
 SUBS=["CD8 TRM","CD8 TEMRA","CD4 Th","CD4 CTL","CD4 Tcm/mem","CD4 Treg"]; VESSEL=["End","Per","SMC"]
 MODULES={"DAM_activation":["CD68","APOE","SPP1","TREM2","GPNMB","FTL","CST7","ITGAX","LPL"],
          "MHCII_antigen_pres":["CIITA","HLA-DRA","HLA-DPA1","HLA-DQB1","CD74"]}

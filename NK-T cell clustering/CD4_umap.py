@@ -11,8 +11,8 @@ from pathlib import Path
 import numpy as np, pandas as pd, h5py, scanpy as sc, anndata as ad, matplotlib.pyplot as plt
 from scipy.sparse import csr_matrix
 sc.settings.verbosity=0; plt.rcParams.update({"font.size":9})
-NEW=Path(r"D:\Caterina\MERSCOPE\merged_analysis\scHPF\new")
-H5=Path(r"D:\Caterina\MERSCOPE\merged_analysis\cellmap\merged_qc_brain_remapped.h5ad")
+NEW=Path(r"<MERSCOPE_ROOT>\merged_analysis\scHPF\new")
+H5=Path(r"<MERSCOPE_ROOT>\merged_analysis\cellmap\merged_qc_brain_remapped.h5ad")
 INTR=["F0","F2","F3","F5","F6","F7"]   # CD4 intrinsic (spillover F1,F4 dropped)
 
 lab=pd.read_csv(NEW/"Tcell_subset_final_labels.csv",index_col=0).iloc[:,0]

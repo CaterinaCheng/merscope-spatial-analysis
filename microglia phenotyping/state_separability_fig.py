@@ -10,7 +10,7 @@ except Exception: pass
 from pathlib import Path
 import numpy as np, pandas as pd, matplotlib.pyplot as plt
 from scipy.stats import spearmanr
-NEW=Path(r"D:\Caterina\MERSCOPE\merged_analysis\scHPF\new")
+NEW=Path(r"<MERSCOPE_ROOT>\merged_analysis\scHPF\new")
 plt.rcParams.update({"font.size":9,"font.family":"DejaVu Sans"})
 S=pd.read_csv(NEW/"microglia_green_scores.csv",index_col=0)
 theta=pd.read_csv(NEW/"microglia_schpf_cell_scores.csv",index_col=0).reindex(S.index)

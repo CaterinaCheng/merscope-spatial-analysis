@@ -4,9 +4,9 @@ Spatial transcriptomics (MERSCOPE, 550-gene immune-focused panel) analysis of br
 types, T/NK-cell subsets, microglial states, and their spatial interactions in human brain.
 
 > **Scripts only — no data.** Input matrices, coordinates, and donor metadata are
-> unpublished/confidential and excluded via `.gitignore`. Paths in the scripts point to the
-> local data location. Number prefixes (execution order) have been removed; scripts are
-> grouped by theme below.
+> unpublished/confidential and excluded via `.gitignore`. Local paths are genericized to a
+> `<MERSCOPE_ROOT>` placeholder — set it to your data location before running. Number prefixes
+> (execution order) have been removed; scripts are grouped by theme below.
 
 ## Repository structure
 

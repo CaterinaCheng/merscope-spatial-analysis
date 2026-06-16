@@ -11,8 +11,8 @@ from pathlib import Path
 import numpy as np, pandas as pd, h5py, scanpy as sc, anndata as ad, matplotlib.pyplot as plt
 from scipy.sparse import csr_matrix
 sc.settings.verbosity=0; plt.rcParams.update({"font.size":9})
-NEW=Path(r"D:\Caterina\MERSCOPE\merged_analysis\scHPF\new")
-H5=Path(r"D:\Caterina\MERSCOPE\merged_analysis\cellmap\merged_qc_brain_remapped.h5ad")
+NEW=Path(r"<MERSCOPE_ROOT>\merged_analysis\scHPF\new")
+H5=Path(r"<MERSCOPE_ROOT>\merged_analysis\cellmap\merged_qc_brain_remapped.h5ad")
 hr=pd.read_csv(NEW/"TNK_hardrule_classification.csv").set_index("cell_id")
 keep=hr[hr.hardrule.isin(["T","NK"])].copy()   # drop ambiguous
 print("kept T+NK:",keep.hardrule.value_counts().to_dict())

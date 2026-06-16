@@ -14,8 +14,8 @@ from scipy.sparse import csr_matrix
 from scipy.stats import mannwhitneyu, rankdata
 import warnings; warnings.filterwarnings("ignore"); sc.settings.verbosity=0
 plt.rcParams.update({"font.size":9,"font.family":"DejaVu Sans"})
-NEW=Path(r"D:\Caterina\MERSCOPE\merged_analysis\scHPF\new")
-DEC=Path(r"D:\Caterina\MERSCOPE\merged_analysis\cellmap\merged_qc_decontaminated.h5ad")
+NEW=Path(r"<MERSCOPE_ROOT>\merged_analysis\scHPF\new")
+DEC=Path(r"<MERSCOPE_ROOT>\merged_analysis\cellmap\merged_qc_decontaminated.h5ad")
 comps=["perivascular","vessel-adjacent","parenchymal"]
 STATEORD=["Homeostatic","MHC-II/APC","DAM","Phagocytic","Inflammatory/IEG"]
 UP_RED="#C0392B"; DN_BLUE="#2471A3"

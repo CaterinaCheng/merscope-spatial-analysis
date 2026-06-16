@@ -13,8 +13,8 @@ from scipy.sparse import csr_matrix
 from scipy.spatial import cKDTree
 import warnings; warnings.filterwarnings("ignore"); sc.settings.verbosity=0
 plt.rcParams.update({"font.size":9,"font.family":"DejaVu Sans"})
-NEW=Path(r"D:\Caterina\MERSCOPE\merged_analysis\scHPF\new"); QC=Path(r"D:\Caterina\MERSCOPE\QC data")
-DEC=Path(r"D:\Caterina\MERSCOPE\merged_analysis\cellmap\merged_qc_decontaminated.h5ad")
+NEW=Path(r"<MERSCOPE_ROOT>\merged_analysis\scHPF\new"); QC=Path(r"<MERSCOPE_ROOT>\QC data")
+DEC=Path(r"<MERSCOPE_ROOT>\merged_analysis\cellmap\merged_qc_decontaminated.h5ad")
 VESSEL=["End","Per","SMC"]; CD8=["CD8 TRM 1","CD8 TRM 2","CD8 TEMRA"]; NUP,NDN=12,12
 UP_RED="#C0392B"; DN_BLUE="#2471A3"
 SPILL=set(("PECAM1 CLDN5 VWF PDGFRB ACTA2 RGS5 NOTCH3 COL1A1 COL3A1 COL4A3 COL9A3 FN1 A2M FLT1 DCN IFITM3 RGS5 "

@@ -11,7 +11,7 @@ from pathlib import Path
 import numpy as np, pandas as pd, scanpy as sc, schpf, igraph, joblib
 from scipy.sparse import coo_matrix, csr_matrix
 sc.settings.verbosity=0
-REFD=Path(r"D:\Caterina\MERSCOPE\reference"); A=sc.read_h5ad(REFD/"abl5197_T_panel494.h5ad")
+REFD=Path(r"<MERSCOPE_ROOT>\reference"); A=sc.read_h5ad(REFD/"abl5197_T_panel494.h5ad")
 rng=np.random.RandomState(0)
 KGRID=[8,10,12,14,16,18,20]; NTRIAL_SCREEN=3; NTRIAL_FINAL=5; PERDONOR_CAP=5000; MIN_CELLS=10
 

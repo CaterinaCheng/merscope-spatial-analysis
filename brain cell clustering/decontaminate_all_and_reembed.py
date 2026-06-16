@@ -3,7 +3,7 @@
 
 Scripts 185-187 only decontaminated the 4,508 rescued lymphoid cells, so every
 other cell type kept its raw (contaminated) counts and stayed poorly separated
-(Mono/Mac kNN-purity 20%, Microglia 19%, Endothelial 3%, Pericytes 5%).  This
+(per-lineage kNN-purity reported at runtime).  This
 script applies the SAME scHPF factor-attribution denoising to EVERY cell:
 
   each cell keeps only the scHPF factors of its own lineage (+ neutral state
@@ -33,9 +33,9 @@ from scipy.sparse import csr_matrix
 from scipy.spatial import cKDTree
 import matplotlib.pyplot as plt
 
-CMAP = Path(r"D:\Caterina\MERSCOPE\merged_analysis\cellmap")
-ROOT = Path(r"D:\Caterina\MERSCOPE\merged_analysis\scHPF")
-OUT  = Path(r"D:\Caterina\MERSCOPE\merged_analysis\Green2024")
+CMAP = Path(r"<MERSCOPE_ROOT>\merged_analysis\cellmap")
+ROOT = Path(r"<MERSCOPE_ROOT>\merged_analysis\scHPF")
+OUT  = Path(r"<MERSCOPE_ROOT>\merged_analysis\Green2024")
 H5   = CMAP / "merged_qc_brain_remapped.h5ad"
 
 t0 = time.time()

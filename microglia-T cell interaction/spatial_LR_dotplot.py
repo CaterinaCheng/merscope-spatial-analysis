@@ -18,8 +18,8 @@ from scipy.spatial import cKDTree
 from scipy.stats import binomtest
 import warnings; warnings.filterwarnings("ignore")
 plt.rcParams.update({"font.size":9,"font.family":"DejaVu Sans"})
-NEW=Path(r"D:\Caterina\MERSCOPE\merged_analysis\scHPF\new"); QC=Path(r"D:\Caterina\MERSCOPE\QC data")
-DEC=Path(r"D:\Caterina\MERSCOPE\merged_analysis\cellmap\merged_qc_decontaminated.h5ad")
+NEW=Path(r"<MERSCOPE_ROOT>\merged_analysis\scHPF\new"); QC=Path(r"<MERSCOPE_ROOT>\QC data")
+DEC=Path(r"<MERSCOPE_ROOT>\merged_analysis\cellmap\merged_qc_decontaminated.h5ad")
 SUBS=["CD8 TRM 1","CD8 TRM 2","CD8 TEMRA","CD4 Th","CD4 CTL","CD4 Tcm/mem","NK"]
 PAIRS=[("CXCL16","CXCR6","CXCL16→CXCR6 (retention)"),("CCL2","CCR2","CCL2→CCR2 (chemotaxis)"),
        ("CD86","CD28","CD86→CD28 (costim)"),

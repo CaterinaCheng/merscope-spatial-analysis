@@ -16,8 +16,8 @@ from scipy.spatial import cKDTree
 from scipy.stats import fisher_exact
 import warnings; warnings.filterwarnings("ignore")
 plt.rcParams.update({"font.size":9,"font.family":"DejaVu Sans"})
-NEW=Path(r"D:\Caterina\MERSCOPE\merged_analysis\scHPF\new"); QC=Path(r"D:\Caterina\MERSCOPE\QC data")
-DEC=Path(r"D:\Caterina\MERSCOPE\merged_analysis\cellmap\merged_qc_decontaminated.h5ad")
+NEW=Path(r"<MERSCOPE_ROOT>\merged_analysis\scHPF\new"); QC=Path(r"<MERSCOPE_ROOT>\QC data")
+DEC=Path(r"<MERSCOPE_ROOT>\merged_analysis\cellmap\merged_qc_decontaminated.h5ad")
 VESSEL=["End","Per","SMC"]; STATEORD=["Homeostatic","Phagocytic","DAM","Inflammatory/IEG","MHC-II/APC"]  # largest ratio first -> bottom of stack
 SCOL={"Homeostatic":"#3498DB","MHC-II/APC":"#9B59B6","DAM":"#E74C3C","Phagocytic":"#16A085","Inflammatory/IEG":"#F1C40F"}
 co=pd.read_csv(NEW/"microglia_final_coords.csv",index_col=0)

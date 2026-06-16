@@ -16,8 +16,8 @@ from celltypist import models
 from scipy.sparse import csr_matrix, coo_matrix, hstack
 from scipy.spatial import cKDTree
 sc.settings.verbosity=0; plt.rcParams.update({"font.size":9})
-NEW=Path(r"D:\Caterina\MERSCOPE\merged_analysis\scHPF\new"); LAB=Path(r"D:\Caterina\MERSCOPE\merged_analysis\scHPF")
-H5=Path(r"D:\Caterina\MERSCOPE\merged_analysis\cellmap\merged_qc_brain_remapped.h5ad"); QC=Path(r"D:\Caterina\MERSCOPE\QC data")
+NEW=Path(r"<MERSCOPE_ROOT>\merged_analysis\scHPF\new"); LAB=Path(r"<MERSCOPE_ROOT>\merged_analysis\scHPF")
+H5=Path(r"<MERSCOPE_ROOT>\merged_analysis\cellmap\merged_qc_brain_remapped.h5ad"); QC=Path(r"<MERSCOPE_ROOT>\QC data")
 R=30.0; NBTYPES=["Mic","Mono/Mac","Oli","Ast","Exc","Inh","OPC","End","Per","SMC","B"]
 
 with h5py.File(H5,"r") as f:

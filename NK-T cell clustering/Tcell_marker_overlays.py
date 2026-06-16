@@ -11,8 +11,8 @@ from pathlib import Path
 import numpy as np, pandas as pd, h5py, scanpy as sc, anndata as ad, matplotlib.pyplot as plt
 from scipy.sparse import csr_matrix
 sc.settings.verbosity=0; plt.rcParams.update({"font.size":9})
-NEW=Path(r"D:\Caterina\MERSCOPE\merged_analysis\scHPF\new")
-H5=Path(r"D:\Caterina\MERSCOPE\merged_analysis\cellmap\merged_qc_brain_remapped.h5ad")
+NEW=Path(r"<MERSCOPE_ROOT>\merged_analysis\scHPF\new")
+H5=Path(r"<MERSCOPE_ROOT>\merged_analysis\cellmap\merged_qc_brain_remapped.h5ad")
 co=pd.read_csv(NEW/"umap_Tcell_final_coords.csv",index_col=0)
 MARKERS=["GZMB","GZMK","FOXP3","CXCR6","TBX21","ITGAE","NKG7","IL7R","CD8A","CD4","FCGR3A","PRF1"]
 

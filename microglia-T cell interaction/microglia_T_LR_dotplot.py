@@ -13,8 +13,8 @@ import numpy as np, pandas as pd, h5py, scanpy as sc, anndata as ad, matplotlib.
 from scipy.sparse import csr_matrix
 import warnings; warnings.filterwarnings("ignore"); sc.settings.verbosity=0
 plt.rcParams.update({"font.size":9,"font.family":"DejaVu Sans"})
-NEW=Path(r"D:\Caterina\MERSCOPE\merged_analysis\scHPF\new")
-DEC=Path(r"D:\Caterina\MERSCOPE\merged_analysis\cellmap\merged_qc_decontaminated.h5ad")
+NEW=Path(r"<MERSCOPE_ROOT>\merged_analysis\scHPF\new")
+DEC=Path(r"<MERSCOPE_ROOT>\merged_analysis\cellmap\merged_qc_decontaminated.h5ad")
 MIC_TO_T=[("CXCL16","CXCR6"),("CCL3","CCR5"),("CCL4","CCR5"),("CXCL9","CXCR3"),("CXCL10","CXCR3"),
  ("CD86","CD28"),("CD86","CTLA4"),("CD80","CD28"),("CD274","PDCD1"),("PDCD1LG2","PDCD1"),
  ("IL15","IL2RB"),("IL18","IL18R1"),("ICOSLG","ICOS"),("CLEC2D","KLRB1"),("SPP1","CD44"),

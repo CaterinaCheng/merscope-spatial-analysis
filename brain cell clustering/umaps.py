@@ -11,8 +11,8 @@ from pathlib import Path
 import numpy as np, pandas as pd, h5py, matplotlib.pyplot as plt
 import umap
 plt.rcParams.update({"font.size":9})
-NEW=Path(r"D:\Caterina\MERSCOPE\merged_analysis\scHPF\new"); LAB=Path(r"D:\Caterina\MERSCOPE\merged_analysis\scHPF")
-H5=Path(r"D:\Caterina\MERSCOPE\merged_analysis\cellmap\merged_qc_brain_remapped.h5ad")
+NEW=Path(r"<MERSCOPE_ROOT>\merged_analysis\scHPF\new"); LAB=Path(r"<MERSCOPE_ROOT>\merged_analysis\scHPF")
+H5=Path(r"<MERSCOPE_ROOT>\merged_analysis\cellmap\merged_qc_brain_remapped.h5ad")
 
 # ---- A: all-cell UMAP ----
 with h5py.File(H5,"r") as f:

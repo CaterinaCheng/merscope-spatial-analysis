@@ -14,8 +14,8 @@ import numpy as np, pandas as pd, h5py, scanpy as sc, anndata as ad, matplotlib.
 from scipy.sparse import csr_matrix
 import warnings; warnings.filterwarnings("ignore"); sc.settings.verbosity=0
 plt.rcParams.update({"font.size":9,"font.family":"DejaVu Sans"})
-NEW=Path(r"D:\Caterina\MERSCOPE\merged_analysis\scHPF\new")
-DEC=Path(r"D:\Caterina\MERSCOPE\merged_analysis\cellmap\merged_qc_decontaminated.h5ad")
+NEW=Path(r"<MERSCOPE_ROOT>\merged_analysis\scHPF\new")
+DEC=Path(r"<MERSCOPE_ROOT>\merged_analysis\cellmap\merged_qc_decontaminated.h5ad")
 UP_RED="#C0392B"; DN_BLUE="#2471A3"; NUP,NDN=9,9
 # exclude only canonical NON-immune structural markers (vascular/astro/oligo/OPC/neuron)
 EXCLUDE=set(("PECAM1 CLDN5 VWF PDGFRB ACTA2 RGS5 NOTCH3 COL1A1 COL3A1 COL4A3 COL9A3 FN1 A2M FLT1 DCN IFITM3 "

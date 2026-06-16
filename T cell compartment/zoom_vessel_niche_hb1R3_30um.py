@@ -1,6 +1,6 @@
 """
 332_zoom_vessel_niche_hb1R3_30um.py
-Spatial vessel-niche figure for humanbrain-1 R3 (run 250527-3) with the NEW compartment rule:
+Spatial vessel-niche figure for <SAMPLE> R3 (run <RUN_ID>) with the NEW compartment rule:
 perivascular <=30um, vessel-adjacent 30-100um, parenchymal >=100um. New pipeline data
 (decontam master cell types, final T subsets EXCLUDING NK). Full-ROI overview + zoom panel
 with 30um (red) and 100um (dashed) shells around each vessel cell, T cells labeled by distance.
@@ -14,10 +14,10 @@ from matplotlib.lines import Line2D
 from matplotlib.patches import Rectangle, Circle
 from scipy.spatial import cKDTree
 plt.rcParams.update({"font.size":9})
-NEW=Path(r"D:\Caterina\MERSCOPE\merged_analysis\scHPF\new")
-H5=Path(r"D:\Caterina\MERSCOPE\merged_analysis\cellmap\merged_qc_brain_remapped.h5ad")
-QC=Path(r"D:\Caterina\MERSCOPE\QC data"); CMAP=Path(r"D:\Caterina\MERSCOPE\merged_analysis\cellmap")
-RUN="250527-3"; ZOOM_HALF=350; VESSEL=["End","Per","SMC"]
+NEW=Path(r"<MERSCOPE_ROOT>\merged_analysis\scHPF\new")
+H5=Path(r"<MERSCOPE_ROOT>\merged_analysis\cellmap\merged_qc_brain_remapped.h5ad")
+QC=Path(r"<MERSCOPE_ROOT>\QC data"); CMAP=Path(r"<MERSCOPE_ROOT>\merged_analysis\cellmap")
+RUN="<RUN_ID>"; ZOOM_HALF=350; VESSEL=["End","Per","SMC"]
 TSUBS=["CD8 TRM 1","CD8 TRM 2","CD8 TEMRA","CD4 Th","CD4 CTL","CD4 Tcm/mem","CD4 Treg"]  # T cells only, no NK
 lab=pd.read_csv(NEW/"Tcell_subset_final_labels.csv",index_col=0).iloc[:,0]
 with h5py.File(H5,"r") as f:
@@ -36,7 +36,7 @@ X=xy["center_x"].values; Y=xy["center_y"].values
 ok=np.isfinite(X)&np.isfinite(Y)
 df=pd.DataFrame({"cid":ids,"ct":v2r,"x":X,"y":Y})[ok].reset_index(drop=True)
 df["subset"]=lab.reindex(df["cid"]).values
-print(f"{RUN} (humanbrain-1 R3): {len(df)} cells with coords")
+print(f"{RUN} (<SAMPLE> R3): {len(df)} cells with coords")
 is_ves=df["ct"].isin(VESSEL).values
 isT=df["subset"].isin(TSUBS).values
 print(f"  vessel cells={is_ves.sum()}  T cells (no NK)={isT.sum()}")
@@ -76,7 +76,7 @@ for comp,c in COMP_CLR.items():
     ax.scatter(Tdf.x[m],Tdf.y[m],s=s,marker="o",c=c,edgecolors="black",linewidths=0.5,zorder=10)
 ax.add_patch(Rectangle((xmin,ymin),2*ZOOM_HALF,2*ZOOM_HALF,facecolor="none",edgecolor="black",lw=2.5,ls="--",zorder=20))
 ax.set_aspect("equal"); ax.set_xlabel("center_x (µm)"); ax.set_ylabel("center_y (µm)")
-ax.set_title(f"humanbrain-1  R3  — full ROI  (new rule: peri<=30µm, paren>=100µm)\nzoom box centered at ({cx:.0f}, {cy:.0f})",fontsize=12,fontweight="bold")
+ax.set_title(f"<SAMPLE>  R3  — full ROI  (new rule: peri<=30µm, paren>=100µm)\nzoom box centered at ({cx:.0f}, {cy:.0f})",fontsize=12,fontweight="bold")
 for sp in ("top","right"): ax.spines[sp].set_visible(False)
 # ---- right: zoom ----
 ax=axes[1]
@@ -109,6 +109,6 @@ handles=[Line2D([0],[0],marker="o",color="w",markerfacecolor="#e8e8e8",markeredg
     Line2D([0],[0],color="#444444",lw=1.2,ls="--",label="100 µm shell (parenchymal boundary)")]
 ax.legend(handles=handles,loc="center left",bbox_to_anchor=(1.02,0.5),frameon=False,fontsize=10)
 plt.tight_layout(rect=[0,0,0.93,1.0])
-out=NEW/"zoom_vessel_niche_humanbrain1_R3_30um.png"
+out=NEW/"zoom_vessel_niche_<SAMPLE>_R3_30um.png"
 plt.savefig(out,dpi=170,bbox_inches="tight"); plt.close()
 print("Saved:",out)

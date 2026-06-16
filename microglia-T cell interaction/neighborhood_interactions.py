@@ -14,8 +14,8 @@ from scipy.sparse import csr_matrix, coo_matrix
 from scipy.spatial import cKDTree
 import warnings; warnings.filterwarnings("ignore")
 plt.rcParams.update({"font.size":9,"font.family":"DejaVu Sans"})
-NEW=Path(r"D:\Caterina\MERSCOPE\merged_analysis\scHPF\new"); QC=Path(r"D:\Caterina\MERSCOPE\QC data")
-DEC=Path(r"D:\Caterina\MERSCOPE\merged_analysis\cellmap\merged_qc_decontaminated.h5ad")
+NEW=Path(r"<MERSCOPE_ROOT>\merged_analysis\scHPF\new"); QC=Path(r"<MERSCOPE_ROOT>\QC data")
+DEC=Path(r"<MERSCOPE_ROOT>\merged_analysis\cellmap\merged_qc_decontaminated.h5ad")
 VESSEL=["End","Per","SMC"]; RADIUS=30; NPERM=200; rng=np.random.RandomState(0)
 GRP={"Exc":"Neuron","Inh":"Neuron","Ast":"Astro","Oli":"Oligo","OPC":"OPC","Mic":"Microglia",
      "T/NK":"T/NK","Mono/Mac":"Mono/Mac","B":"B","End":"Vessel","Per":"Vessel","SMC":"Vessel"}

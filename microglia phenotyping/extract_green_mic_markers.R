@@ -3,8 +3,8 @@
 # Extract Green2024 microglial STATE annotations + per-state mean expression (on our panel
 # genes) from microglia.seurat.rds, to build literature-anchored microglial-state signatures.
 suppressPackageStartupMessages({ library(Seurat); library(SeuratObject) })
-REF <- "D:/Caterina/MERSCOPE/merged_analysis/Green2024/reference/microglia.seurat.rds"
-OUT <- "D:/Caterina/MERSCOPE/merged_analysis/scHPF/new"
+REF <- "<MERSCOPE_ROOT>/merged_analysis/Green2024/reference/microglia.seurat.rds"
+OUT <- "<MERSCOPE_ROOT>/merged_analysis/scHPF/new"
 cat("loading microglia reference...\n"); t0 <- Sys.time()
 obj <- readRDS(REF); cat("loaded in", format(Sys.time()-t0), " cells:", ncol(obj), "genes:", nrow(obj), "\n")
 md <- obj@meta.data

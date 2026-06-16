@@ -14,8 +14,8 @@ import numpy as np, pandas as pd, h5py, scanpy as sc, anndata as ad
 from scipy.sparse import csr_matrix
 from scipy.stats import spearmanr
 import warnings; warnings.filterwarnings("ignore"); sc.settings.verbosity=0
-NEW=Path(r"D:\Caterina\MERSCOPE\merged_analysis\scHPF\new")
-DEC=Path(r"D:\Caterina\MERSCOPE\merged_analysis\cellmap\merged_qc_decontaminated.h5ad")
+NEW=Path(r"<MERSCOPE_ROOT>\merged_analysis\scHPF\new")
+DEC=Path(r"<MERSCOPE_ROOT>\merged_analysis\cellmap\merged_qc_decontaminated.h5ad")
 sig=pd.read_csv(NEW/"green_mic_state_signatures.csv"); SIG={c:[g for g in sig[c].dropna()] for c in sig.columns}
 STATES=list(SIG.keys()); SH={s:s.split(" (")[0] for s in STATES}
 with h5py.File(DEC,"r") as f:

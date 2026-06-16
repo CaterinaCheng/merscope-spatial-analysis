@@ -14,8 +14,8 @@ from scipy.sparse import csr_matrix
 from scipy.spatial import cKDTree
 from scipy import stats
 sc.settings.verbosity=0; plt.rcParams.update({"font.size":9})
-NEW=Path(r"D:\Caterina\MERSCOPE\merged_analysis\scHPF\new")
-DEC=Path(r"D:\Caterina\MERSCOPE\merged_analysis\cellmap\merged_qc_decontaminated.h5ad"); QC=Path(r"D:\Caterina\MERSCOPE\QC data")
+NEW=Path(r"<MERSCOPE_ROOT>\merged_analysis\scHPF\new")
+DEC=Path(r"<MERSCOPE_ROOT>\merged_analysis\cellmap\merged_qc_decontaminated.h5ad"); QC=Path(r"<MERSCOPE_ROOT>\QC data")
 VESSEL=["End","Per","SMC"]
 BAM=["CD163","MRC1","MARCO","MS4A7","F13A1","SIGLEC1"]   # border-assoc macrophage / perivascular macrophage
 APC=["CD74","HLA-DRA","HLA-DPA1","HLA-DPB1","HLA-DRB1","CIITA"]

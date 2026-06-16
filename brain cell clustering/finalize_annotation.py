@@ -11,7 +11,7 @@ except Exception: pass
 from pathlib import Path
 import numpy as np, pandas as pd, scanpy as sc
 sc.settings.verbosity=0
-CMAP=Path(r"D:\Caterina\MERSCOPE\merged_analysis\cellmap"); SAVE=Path(r"D:\Caterina\MERSCOPE\merged_analysis\scHPF")
+CMAP=Path(r"<MERSCOPE_ROOT>\merged_analysis\cellmap"); SAVE=Path(r"<MERSCOPE_ROOT>\merged_analysis\scHPF")
 A=sc.read_h5ad(CMAP/"allcell_rebuild.h5ad")
 A.X=A.layers["counts"].copy(); sc.pp.normalize_total(A,target_sum=1e4); sc.pp.log1p(A)
 vp=set(A.var_names)

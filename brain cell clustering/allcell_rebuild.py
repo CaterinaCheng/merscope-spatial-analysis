@@ -13,8 +13,8 @@ import numpy as np, pandas as pd
 import h5py, anndata as ad, scanpy as sc
 from scipy.sparse import csr_matrix
 sc.settings.verbosity=1; sc.settings.n_jobs=8
-CMAP=Path(r"D:\Caterina\MERSCOPE\merged_analysis\cellmap"); SAVE=Path(r"D:\Caterina\MERSCOPE\merged_analysis\scHPF")
-H5=CMAP/"merged_qc_brain_remapped.h5ad"; QC=Path(r"D:\Caterina\MERSCOPE\QC data")
+CMAP=Path(r"<MERSCOPE_ROOT>\merged_analysis\cellmap"); SAVE=Path(r"<MERSCOPE_ROOT>\merged_analysis\scHPF")
+H5=CMAP/"merged_qc_brain_remapped.h5ad"; QC=Path(r"<MERSCOPE_ROOT>\QC data")
 OUT=CMAP/"allcell_rebuild.h5ad"
 
 print("loading raw counts + obs...")

@@ -8,7 +8,7 @@ try: sys.stdout.reconfigure(encoding="utf-8")
 except Exception: pass
 from pathlib import Path
 import numpy as np, pandas as pd, matplotlib.pyplot as plt
-NEW=Path(r"D:\Caterina\MERSCOPE\merged_analysis\scHPF\new")
+NEW=Path(r"<MERSCOPE_ROOT>\merged_analysis\scHPF\new")
 SCOL={"Homeostatic":"#3498DB","MHC-II/APC":"#9B59B6","DAM":"#E74C3C","Phagocytic":"#16A085","Inflammatory/IEG":"#F1C40F"}
 GORD=["Homeostatic","MHC-II/APC","DAM","Phagocytic","Inflammatory/IEG"]
 SIGN=["Microglia-core","Astrocyte","Oligo","OPC","Neuron","Vascular","Lymphoid"]
