@@ -1,7 +1,7 @@
 """
-305_Tcell_compartments.py
+Tcell_compartments.py
 Assign each final-annotated T/NK cell a vascular compartment by distance to nearest vessel
-(End/Per/SMC): perivascular <=50um, vessel-adjacent 50-100um, parenchymal >100um.
+(End/Per/SMC): perivascular <=30um, vessel-adjacent 30-100um, parenchymal >100um.
 Plots: (A) overall compartment composition, (B) compartment composition per subset.
 """
 import sys
